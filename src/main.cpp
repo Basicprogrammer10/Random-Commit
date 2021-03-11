@@ -13,6 +13,8 @@ int main() {
     msg.append(commitMessages::messages[RandIndex]);
     msg.append("\"");
 
+    cout << msg << endl;
+
     system(msg.c_str());
     return 0;
 }
