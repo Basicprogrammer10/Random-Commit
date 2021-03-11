@@ -2,7 +2,7 @@
 #define RANDOM_COMMIT_MESSAGES_H
 
 namespace commitMessages {
-    const std::string messages[2581] = {
+    const std::string messages[] = {
             "\"Get that shit outta my master.\"",
             "#GrammarNazi",
             "$(init 0)",
