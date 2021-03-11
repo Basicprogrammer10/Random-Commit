@@ -14,7 +14,6 @@ int main() {
     msg.append("\"");
 
     cout << msg << endl;
-
     system(msg.c_str());
     return 0;
 }
