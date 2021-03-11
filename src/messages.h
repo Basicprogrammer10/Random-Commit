@@ -525,7 +525,8 @@ namespace commitMessages {
             "This will definitely break in 2056 (TODO)",
             "Herpderp, shoulda check if it does really compile.",
             "Reinventing the wheel. Again.",
-
     };
+
+    int messageLength = sizeof(messages)/sizeof(messages[0]);
 }
 #endif

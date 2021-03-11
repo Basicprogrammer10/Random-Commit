@@ -1,15 +1,18 @@
 #include <iostream>
-#include <cstdlib>
 #include <ctime>
 #include "messages.h"
 
 using namespace std;
 
 int main() {
-    srand(time(nullptr));
+    srand(static_cast<unsigned int>(time(nullptr)));
 
-    int RandIndex = rand() % 527;
-    cout << commitMessages::messages[RandIndex];
+    int RandIndex = rand() % commitMessages::messageLength;
 
+    string msg = "git commit -a -m \"";
+    msg.append(commitMessages::messages[RandIndex]);
+    msg.append("\"");
+
+    system(msg.c_str());
     return 0;
 }

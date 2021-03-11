@@ -2,7 +2,7 @@ from datetime import datetime
 import requests
 
 ############ VARS ############
-index = 50000
+index = 100000
 outFile = 'out.txt'
 uri = 'http://whatthecommit.com/index.txt'
 
@@ -24,8 +24,8 @@ def getMessages(index, uri):
     for i in range(index):
         x = requests.get(uri)
         working = x.text
-        if working not in messages:
-            messages.append(working)
+        if working in messages: continue
+        messages.append(working)
         DebugPrint('Request', f"{i}/{index} ~~ {round(i / index * 100, 3)}%", 'cyan', end="\r")
     return messages
 
