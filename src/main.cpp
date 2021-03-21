@@ -5,14 +5,22 @@
 using namespace std;
 
 int main(int argc, char **argv) {
-    string gitArgs = "-a";
+    string gitArgs = "-a ";
+
+    if (argc > 1){
+        gitArgs = "";
+        for (int i = 1; i < argc; i++) {
+            gitArgs += argv[i];
+            gitArgs += " ";
+        }
+    }
 
     srand(static_cast<unsigned int>(time(nullptr)));
     int RandIndex = rand() % commitMessages::messageLength;
 
-    string msg = "git commit " + gitArgs + " -m \"" + commitMessages::messages[RandIndex] + "\"";
+    string msg = "git commit " + gitArgs + "-m \"" + commitMessages::messages[RandIndex] + "\"";
 
-    cout << msg << endl;
+    cout << "[*] Running: " << msg << endl;
     system(msg.c_str());
     return 0;
 }
