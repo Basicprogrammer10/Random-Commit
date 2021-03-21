@@ -4,14 +4,13 @@
 
 using namespace std;
 
-int main() {
-    srand(static_cast<unsigned int>(time(nullptr)));
+int main(int argc, char **argv) {
+    string gitArgs = "-a";
 
+    srand(static_cast<unsigned int>(time(nullptr)));
     int RandIndex = rand() % commitMessages::messageLength;
 
-    string msg = "git commit -a -m \"";
-    msg.append(commitMessages::messages[RandIndex]);
-    msg.append("\"");
+    string msg = "git commit " + gitArgs + " -m \"" + commitMessages::messages[RandIndex] + "\"";
 
     cout << msg << endl;
     system(msg.c_str());
