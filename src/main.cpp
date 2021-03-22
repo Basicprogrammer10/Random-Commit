@@ -1,16 +1,14 @@
 #include <iostream>
 #include <ctime>
-//#include <windows.h>
 
-#include "messages.h"
+
+#include "messages.hpp"
+#include "windows.hpp"
 
 using namespace std;
 
 int main(int argc, char **argv) {
-    //DWORD l_mode;
-    //HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
-    //GetConsoleMode(hStdout, &l_mode);
-    //SetConsoleMode(hStdout, l_mode | 0x0004 | 0x0008);
+    colorInit();
     string gitArgs = "-a ";
 
     if (argc > 1){

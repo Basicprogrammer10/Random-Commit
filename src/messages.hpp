@@ -1,5 +1,5 @@
-#ifndef RANDOM_COMMIT_MESSAGES_H
-#define RANDOM_COMMIT_MESSAGES_H
+#ifndef RANDOM_COMMIT_MESSAGES_HPP
+#define RANDOM_COMMIT_MESSAGES_HPP
 
 namespace commitMessages {
     const std::string messages[] = {
