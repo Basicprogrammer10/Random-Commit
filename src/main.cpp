@@ -25,6 +25,6 @@ int main(int argc, char **argv) {
     string msg = "git commit " + gitArgs + "-m \"" + commitMessages::messages[RandIndex] + "\"";
 
     cout << "\033[32m[*] Running: \033[34m" << msg << "\033[0m" << endl;
-    //system(msg.c_str());
+    system(msg.c_str());
     return 0;
 }
